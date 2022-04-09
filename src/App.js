@@ -20,6 +20,7 @@ const Container = styled.div`
 const Child = styled.div`
   grid-row-start: 1;
   grid-column-start: 1;
+  width:5px;
   
   ${({ active }) => active && `
   text-decoration: line-through;
@@ -29,6 +30,7 @@ const Child = styled.div`
 const ChildInput = styled.div`
   grid-row-start: 1;
   grid-column-start: 1;
+  
 
   ${({ active }) => active && `
   display: none;
