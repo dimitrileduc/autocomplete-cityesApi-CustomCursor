@@ -20,7 +20,7 @@
 
 ## Tech Stack
 
-**Client:** React, styled-component, auto-complete , styled-component, custom css cursor , pure css
+**Client:** React, auto-complete , styled-component, custom css cursor , pure css
 
 **Server:** Node.js, countriesnow API, geolocation-db API 
 
