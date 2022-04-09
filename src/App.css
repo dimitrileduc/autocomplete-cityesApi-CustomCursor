@@ -66,6 +66,17 @@ input:focus{
 
 }
 
+.headerCity{
+  color:rgb(220, 56, 56);
+  background: none;
+  font-size: 16px;
+  opacity : 1 ;
+  letter-spacing: .2rem;
+  margin-top:.1rem;
+  margin-left:.2rem;
+
+}
+
 * {
   cursor: none;
   background-color: #333;
