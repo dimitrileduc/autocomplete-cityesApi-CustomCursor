@@ -1,68 +1,54 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1 align="center">Find a city app </h1>
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `yarn start`
+> React app using autocomplete, geolocation, countriesnow API, styled-component and custom css cursor
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 🏠 [Github Project](https://github.com/dimitrileduc/autocomplete-cityesApi-CustomCursor)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### ✨ [Demo](https://codesandbox.io/s/github/dimitrileduc/autocomplete-cityesApi-CustomCursor?file=/src/App.js)
 
-### `yarn test`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+## Author
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+👤 **Dimitri Leduc**
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+* Github: [@dimitrileduc](https://github.com/dimitrileduc)
+* LinkedIn: [@dimitrileduc](https://linkedin.com/in/dimitrileduc)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
+## Tech Stack
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+**Client:** React, styled-component, auto-complete , styled-component, custon css cursor , pure css
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**Server:** Node.js, countriesnow API, geolocation-db API 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## To Do ( V2 coming soon ... )
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+* Split code into separate components
+* Add some minimal animations with GSAP or FramerMotion
+* Display an image of the selected city with Unsplash API
 
-## Learn More
+## Ressources credit 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* Medium.com Create autocomplete: https://medium.com/how-to-react/create-an-autocomplete-input-box-in-react-js-46724fe6e417
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+* Medium.com Create custom cursor :https://javascript.plainenglish.io/how-to-create-a-custom-cursor-in-react-272314682285
 
-### Code Splitting
+* Stackoverflow: https://stackoverflow.com/questions/67263476/how-to-call-child-function-from-parent-react-hook
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+* Readme editor: https://readme.so/fr/editor
+* My public Gists list: https://gist.github.com/dimitrileduc
 
-### Analyzing the Bundle Size
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
 
-### Making a Progressive Web App
+## 🤝 Contributing
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/becodeorg/hamilton-6-react-intro-dimitrileduc/issues). 
 
-### Advanced Configuration
+## Show your support
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+Give a ⭐️ if this project helped you!
 
-### Deployment
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
