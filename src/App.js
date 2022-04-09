@@ -45,6 +45,14 @@ function App() {
   const [displaySelected, setDisplaySelected] = useState();
 
   const [hoverSelected, setHoverSelected ] = useState();
+  /*
+  var simulateClick = new MouseEvent('click', {
+    bubbles: false,
+    cancelable: true,
+    view: window,
+});
+*/
+ 
 
   useEffect(() => {
     setDisplaySelected(true)
@@ -111,9 +119,33 @@ function App() {
 
   function onClickInput(e){
     console.log("onclick")
+    
     if (displaySelected ){
       setDisplaySelected(false)
     }
+    
+    
+    /*
+    var idInput = document.getElementById('idInput');
+    window.setTimeout(function(){
+      idInput.addEventListener('click', () => console.log('clicked'))
+    idInput.dispatchEvent(simulateClick)
+}, 5000);
+*/
+    
+    
+
+   
+    
+    
+  }
+
+
+
+  function onClickDiv(e){
+    console.log("onclickdiv")
+    
+    
   }
 
   function strNoAccent(a) {
@@ -155,7 +187,13 @@ function App() {
     if (found !== undefined) {
       console.log(found + " is in data");
       setText("");
+      
+      setselectedCity(found)
+      setDisplaySelected(true)
+      setHoverSelected(false)
+      
     } else {
+      
     }
   }
 
@@ -181,6 +219,7 @@ function App() {
     console.log("on leave - over selected ? " + hoverSelected)
     
   }
+  
 
   return (
     <>
@@ -188,18 +227,21 @@ function App() {
       <div className="headerCity"> geolocated city is {selectedCity} </div>
       
       <div className="App">
-        <Container onClick={onClickInput} text-decoration="none" >
-          <Child active={hoverSelected} onMouseEnter={onSelectedEvent} onMouseLeave={onSelectedOut}  className="selectedCity"> {selectedCity}</Child>
+        <Container  text-decoration="none" >
+          <Child onClick={onClickInput} active={hoverSelected} onMouseEnter={onSelectedEvent} onMouseLeave={onSelectedOut}  className="selectedCity"> {selectedCity}</Child>
           <ChildInput active={displaySelected}  >
-            <Hint options={hintData} allowTabFill>
+            <Hint   options={hintData} allowTabFill>
               <input
+              
+                id="idInput"
                 placeholder="find a city"
-                spellcheck="false"
+                spellCheck="false"
                 className="input-with-hint"
                 value={text}
                 onChange={handleChange}
                 onKeyPress={handleKeyDown}
                 onMouseEnter={onDivEvent} onMouseLeave={onDivOut}
+                onClick = {onClickDiv}
                 
               ></input>
             </Hint>

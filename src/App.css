@@ -36,21 +36,25 @@ input:focus{
   
 }
 
+input:focus::placeholder {
+  color: white;
+}
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
  
-  color: white;
+  color: rgb(148, 148, 148);
   opacity: 1; /* Firefox */
+  
  
 }
 
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
-  color: white;
+  color: rgb(148, 148, 148);
   
 }
 
 ::-ms-input-placeholder { /* Microsoft Edge */
-  color: white;
+  color: rgb(148, 148, 148);
   
 }
 
