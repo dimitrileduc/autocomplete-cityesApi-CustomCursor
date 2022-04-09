@@ -237,7 +237,7 @@ function App() {
               <input
               
                 id="idInput"
-                placeholder="find a city"
+                placeholder="find a city "
                 spellCheck="false"
                 className="input-with-hint"
                 value={text}
@@ -245,6 +245,7 @@ function App() {
                 onKeyPress={handleKeyDown}
                 onMouseEnter={onDivEvent} onMouseLeave={onDivOut}
                 onClick = {onClickDiv}
+                autoComplete="off"
                 
               ></input>
             </Hint>
