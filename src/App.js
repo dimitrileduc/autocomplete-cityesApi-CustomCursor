@@ -73,6 +73,7 @@ function App() {
     setIP(res.data.city);
     //setText("find a city");
     setselectedCity(res.data.city);
+    let geoInit = res.data.city;
   };
 
   useEffect(() => {
@@ -224,7 +225,7 @@ function App() {
   return (
     <>
       <Cursor ref={childRef} ></Cursor>
-      <div className="headerCity"> geolocated city is {selectedCity} </div>
+      
       
       <div className="App">
         <Container  text-decoration="none" >
