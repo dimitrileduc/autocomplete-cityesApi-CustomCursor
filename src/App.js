@@ -213,12 +213,12 @@ function App() {
     
     setHoverSelected(true)
     console.log("on hover - over selected ? " + hoverSelected)
-
+    onDivEvent();
   }
   function onSelectedOut(e){
     setHoverSelected(false)
     console.log("on leave - over selected ? " + hoverSelected)
-    
+    onDivOut()
   }
   
 
