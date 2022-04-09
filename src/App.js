@@ -7,27 +7,50 @@ import Cursor from "./Cursor";
 
 const Container = styled.div`
   display: grid;
-
+  
   grid-template-columns: 1fr;
+  height:auto;
+
+  
+ 
 `;
+
+
 
 const Child = styled.div`
   grid-row-start: 1;
   grid-column-start: 1;
-  background-color: #184e65;
-  display: none;
+  
+  ${({ active }) => active && `
+  text-decoration: line-through;
+  `}
 `;
 
 const ChildInput = styled.div`
   grid-row-start: 1;
   grid-column-start: 1;
-  display: block;
+
+  ${({ active }) => active && `
+  display: none;
+  `}
+
+  
 `;
 
 function App() {
   const [hintData, setHintData] = useState([]);
   const [text, setText] = useState("");
   const [selectedCity, setselectedCity] = useState("");
+
+  const [displaySelected, setDisplaySelected] = useState();
+
+  const [hoverSelected, setHoverSelected ] = useState();
+
+  useEffect(() => {
+    setDisplaySelected(true)
+    setHoverSelected(false)
+  }, []);
+  
 
  
   const childRef = React.useRef();
@@ -72,7 +95,7 @@ function App() {
 
   //a mettre dans le return pour afficher les villes :
   // <code>{`[${hintData.toString()}]`}</code>
-  function handleclick(e) {
+  function handleChange(e) {
     e.preventDefault();
     setText(e.target.value);
     //console.log(e.target.code)
@@ -83,6 +106,13 @@ function App() {
     if (event.key === "Enter") {
       console.log("enter press here! ");
       checkIfExist(event.target.value);
+    }
+  }
+
+  function onClickInput(e){
+    console.log("onclick")
+    if (displaySelected ){
+      setDisplaySelected(false)
     }
   }
 
@@ -140,24 +170,37 @@ function App() {
 
   }
 
+  function onSelectedEvent(e){
+    
+    setHoverSelected(true)
+    console.log("on hover - over selected ? " + hoverSelected)
+
+  }
+  function onSelectedOut(e){
+    setHoverSelected(false)
+    console.log("on leave - over selected ? " + hoverSelected)
+    
+  }
+
   return (
     <>
       <Cursor ref={childRef} ></Cursor>
       <div className="headerCity"> geolocated city is {selectedCity} </div>
       
       <div className="App">
-        <Container  >
-          <Child className="selectedCity"> {selectedCity}</Child>
-          <ChildInput >
+        <Container onClick={onClickInput} text-decoration="none" >
+          <Child active={hoverSelected} onMouseEnter={onSelectedEvent} onMouseLeave={onSelectedOut}  className="selectedCity"> {selectedCity}</Child>
+          <ChildInput active={displaySelected}  >
             <Hint options={hintData} allowTabFill>
               <input
                 placeholder="find a city"
                 spellcheck="false"
                 className="input-with-hint"
                 value={text}
-                onChange={handleclick}
+                onChange={handleChange}
                 onKeyPress={handleKeyDown}
                 onMouseEnter={onDivEvent} onMouseLeave={onDivOut}
+                
               ></input>
             </Hint>
           </ChildInput>

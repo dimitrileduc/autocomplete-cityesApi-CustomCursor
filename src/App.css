@@ -1,4 +1,4 @@
-html, body, .App, .App>div {
+html, body, .App {
   height: 100vh;
   margin: 0;
   margin-top: 0;
@@ -79,7 +79,7 @@ input:focus{
 
 * {
   cursor: none;
-  background-color: #333;
+  background-color: rgb(0, 0, 0);
 }
 
 .cursor-dot,

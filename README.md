@@ -28,7 +28,7 @@
 
 * Split code into separate components
 * Add some minimal animations with GSAP or FramerMotion
-* Display an image of the selected city with Unsplash API
+
 
 ## Ressources credit 
 
