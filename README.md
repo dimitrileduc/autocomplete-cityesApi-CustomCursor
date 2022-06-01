@@ -1,4 +1,4 @@
-<h1 align="center">Find a city app </h1>
+
 
 
 
@@ -20,14 +20,11 @@
 
 ## Tech Stack
 
-**Client:** React, auto-complete , styled-component, custom css cursor , pure css
+React, auto-complete , styled-component, custom css cursor , pure css
 
-**Server:** Node.js, countriesnow API, geolocation-db API 
+Node.js, countriesnow API, geolocation-db API 
 
-## To Do ( V2 coming soon ... )
 
-* Split code into separate components
-* Add some minimal animations with GSAP or FramerMotion
 
 
 ## Ressources credit 
@@ -43,12 +40,5 @@
 
 
 
-## 🤝 Contributing
-
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/becodeorg/hamilton-6-react-intro-dimitrileduc/issues). 
-
-## Show your support
-
-Give a ⭐️ if this project helped you!
 
 
